@@ -1,0 +1,40 @@
+{
+  "manifest_version": 2,
+
+  "name": "广告过滤",
+
+  "description": "广告屏蔽、过滤,new tab页替换",
+
+  "version": "1.0",
+
+  "offline_enabled": true,
+
+  "icons": {
+    "128": "i-128.png",
+    "48": "i-64.png",
+    "16": "i-16.png"
+  },
+
+ "permissions": [ "tabs", "http://*/*", "https://*/*", "contextMenus", "webRequest", "webRequestBlocking", "webNavigation", "unlimitedStorage", "notifications" ],
+
+  "browser_action": {
+    "default_icon": "i-64.png",
+    "default_title": "广告过滤",
+    "default_popup": "popup.html"
+  },
+
+ "background": {
+    "page": "bg.html"
+  },  
+
+  "chrome_url_overrides": {
+    "newtab": "bg.html"
+ },
+  
+  "content_scripts": [
+    {
+      "js": [ "/js/jquery.js", "/js/popup.js" ],
+      "matches": [ "http://*/*", "https://*/*" ]
+    }
+  ]
+}

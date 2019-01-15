@@ -1,0 +1,57 @@
+body,input{
+    font-size: 1.55em;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.wrap{
+    position: absolute;
+    text-align: center;
+    top: 48%;
+    right: 0;
+    left: 0;
+}
+.search_input{
+    background-color: transparent;
+    text-align: center;
+    min-width: 604px;
+    max-width: 90%;
+    margin: 0 auto;
+    border: 0;
+    border-bottom: 3px solid #fff;
+    line-height: normal;
+    font-weight: 500;
+    outline: 0;
+    color: #fff;
+    overflow: hidden;
+}
+.selectdiv
+{
+    width: 150px;
+    height: 45px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #ccc;
+    display:inline-block;
+    position: absolute;
+}
+select{
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 48px;
+    line-height: 48px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding-left: 30px;
+    font-size: 0.85em;
+}
+
+.selectdiv:after{
+    content: "";
+    width: 15px;
+    height: 8px;
+    background: url(/img/xiala.png) no-repeat center;
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    pointer-events: none;
+}
