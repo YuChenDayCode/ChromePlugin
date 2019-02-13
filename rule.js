@@ -187,7 +187,12 @@
      "/ads.js",
      "kuaiya_[\\d].js",
      "kaijia_[\\d].js",
-     "weathercn.com/[a-z]{8,}.js"
-
-
+     "weathercn.com/[a-z]{8,}.js",
+     "2cto.com/js/gg.js",
+     "2cto/2cto_pc.js",
+     "2cto.com/js/baidu_js_push.js",
+     "2cto.com/js/tj.js",
+     "idgdmg.com.cn/s/[a-z0-9]{10,}.js",
+     "zol.com.cn/[a-z]{5,}.js",
+     "bdjiaoben.wmxa.cn"
 ];
