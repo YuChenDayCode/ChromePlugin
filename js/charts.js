@@ -6,7 +6,12 @@ var Chart = function () {
     var moyu = JSON.parse(localStorage.getItem("Moyu")) || [];
     var data = [];
     moyu.forEach(item => {
-        data.push({ "name": item.host + "(" + item.count + ")", "y": item.count });
+        var m = Math.floor(item.time/60);
+        var s = item.time%60;
+        m = (m<10)?'0'+m:m;
+        s = (s<10)?'0'+s:s;
+        var time = m+':'+s;
+        data.push({ "name": item.host + "(" +time + ")", "y": item.time });
     });
     Highcharts.chart('container', {
         chart: {
@@ -39,7 +44,7 @@ var Chart = function () {
             }
         },
         series: [{
-            name: '比例',
+            name: '停留时间(秒)',
             colorByPoint: true,
             data: data
         }]
