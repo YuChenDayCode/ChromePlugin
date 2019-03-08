@@ -22,12 +22,17 @@ var itv;//计时器
 var AccessWeb = ""; //当前访问网站
 //访问记录统计
 function AccessRecords(url) {
+    var thisDate = new Date().getMonth() + 1 + '.' + new Date().getDate();
+    var laststime = localStorage.getItem("Moyu_LastTime") || "";
+    if (thisDate != laststime) localStorage.setItem("Moyu", []);
+
     var host = url.split('/')[2];
-    var moyu = JSON.parse(localStorage.getItem("Moyu")) || [];
+    var moyu = JSON.parse(localStorage.getItem("Moyu") || "[]") || [];
     var single = moyu.find(t => t.host == host) || null;
     if (single == null) moyu.push({ "host": host, "count": 1, "time": 0 });
     else single.count += 1;
     localStorage.setItem("Moyu", JSON.stringify(moyu));
+    localStorage.setItem("Moyu_LastTime", thisDate);
 }
 
 //创建标签
@@ -89,8 +94,8 @@ var globalTimer = setInterval(() => {
         }
         else {
             if (isRun) {
-                var tempurl ="http://"+AccessWeb;
-                AccessWeb=""; //清空地址不然无法计时
+                var tempurl = "http://" + AccessWeb;
+                AccessWeb = ""; //清空地址不然无法计时
                 UpdatedTab("complete", true, tempurl);
                 isRun = false;
             }
