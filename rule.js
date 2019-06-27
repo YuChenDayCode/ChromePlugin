@@ -194,5 +194,6 @@
      "2cto.com/js/tj.js",
      "idgdmg.com.cn/s/[a-z0-9]{10,}.js",
      "zol.com.cn/[a-z]{5,}.js",
-     "bdjiaoben.wmxa.cn"
+     "bdjiaoben.wmxa.cn",
+     "datas.tianqistatic.com/*[a-z]{5,}.js"
 ];

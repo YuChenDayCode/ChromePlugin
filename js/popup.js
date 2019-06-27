@@ -58,4 +58,6 @@ var BaiDuIndex = function () {
         $("#content_left>div,#content_right>div").has("a+span:contains('广告'),a>span:contains('广告')").remove();
         $("#content_right div").has("div>a:contains('广告')").remove();
     }, 2222);
+    $('#con-ar').next().remove();
+    $('.c-container').css({"border-radius": "8px","box-shadow": "0 1px 4px 0 rgba(0,0,0,0.37)","padding":"15px"});
 }
