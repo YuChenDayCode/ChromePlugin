@@ -6,21 +6,26 @@
         if (document.readyState == 'complete') { DelDom(url); }
         if (window.location.host.indexOf('.baidu.com') > -1) { BaiDuIndex(); }
         if (window.location.host.indexOf('blog.csdn.net') > -1) { $('#article_content').height('auto'); }
+
     }
     DelDom(url);
-    if (window.location.host.indexOf('.baidu.com') > -1) { BaiDuIndex(); }
-  
+    var uuu = window.location.host;
+    if (uuu.indexOf('.baidu.com') > -1) { 
+        BaiDuIndex(); BaiduFilter();
+    }
+      
 });
 
 var DelDom = function (url) {
-    var ad_name = [      //##全局 
-        "csdn.net@@.recommend-ad-box", "csdn.net@@.mediav_ad", "csdn.net@@body>.pulllog-box", "csdn.net@@.advert-cur", "csdn.net@@.4paradigm_target", "csdn.net@@.J_adv",
+    var ad_name = [      //##全局       "baidu.com@@.s-news-banner-wrap", "baidu.com@@#s_form_wrapper",
+        "csdn.net@@.recommend-ad-box", "csdn.net@@.mediav_ad", "csdn.net@@body>.pulllog-box", "csdn.net@@.advert-cur", "csdn.net@@.4paradigm_target", "csdn.net@@.J_adv","csdn.net@@#writeGuide",
         "csdn.net@@.fourth_column", "csdn.net@@#asideFooter", "csdn.net@@.hide-article-box", "csdn.net@@.indexSuperise",
-        "baidu.com@@.s-news-banner-wrap", "baidu.com@@#s_form_wrapper",
+   
         "zhidao.baidu.com@@#qb-side",
         "zhihu.com@@.Sticky>.Banner", "zhihu.com@@.TopstoryItem--advertCard", "zhihu.com@@.Banner .Banner-image", "zhihu.com@@.Banner-image[alt='广告]",
         "news.china.com@@.epbWrap", "news.china.com@@.chan_wntj",
         "##.gg200x300", "###js-epBobo", "###epContentRight", "###adfdiv", "###ft_Div_ftcpvrich3699B", "##.rFixedBox",
+        "bilibili.com@@#bili_live","bilibili.com@@#reportFirst2","bilibili.com@@#bili_manga",
 
         "##a[href*='click.aliyun.com']",
         "##div[class*='ad-box'],[baidu_imageplus_sensitive_judge='true']"
@@ -60,4 +65,12 @@ var BaiDuIndex = function () {
     }, 2222);
     $('#con-ar').next().remove();
     $('.c-container').css({"border-radius": "8px","box-shadow": "0 1px 4px 0 rgba(0,0,0,0.37)","padding":"15px"});
+}
+
+/**过滤搜索结果网址**/
+var BaiduFilter = function (){
+    var filter_URL=['cncrk.com','ddooo.com','xue51.com','jb51.net','33lc.com', 'kxdw.com', '05sun.com','zdfans.com','recomm.cnblogs.com','bubuko.com'];
+    for(var i=0;i<filter_URL.length;i++){
+        $("#content_left>div").has("div>a:contains('"+filter_URL[i]+"')").remove();
+    }
 }

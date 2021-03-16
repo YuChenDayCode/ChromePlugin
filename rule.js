@@ -176,6 +176,7 @@
      "js.2011.8684.com/ac[0-9]{4,}.js",
      "jscode.jbzj.com/[a-z0-9]{7,}.js",
      "icws.jb51.net/good/ssoft.js",
+     "icws.jb51.net/good/arc2019.js",
      "1.mgff.com/[a-z0-9]{15,}.js",
      "stats.chinaz.com/gj_g/tool_a.js",
      "fpbb.aizhan.com",
@@ -195,5 +196,18 @@
      "idgdmg.com.cn/s/[a-z0-9]{10,}.js",
      "zol.com.cn/[a-z]{5,}.js",
      "bdjiaoben.wmxa.cn",
-     "datas.tianqistatic.com/*[a-z]{5,}.js"
+     "datas.tianqistatic.com/*[a-z]{5,}.js",
+     "g.ieeod0.com/*",
+     "c.v4dwkcv.com/*",
+     "j.sdqoi2d.com/*",
+     "c.v4dwkcv.com/*",
+     "j.sdqoi2d.com/*",
+     "cnzz.com/*",
+     "anquanzhuomian.com/*",
+     "dlads.cn/*",
+     "js.users.51.la/*",
+     "itnx.thtxque.cn/*",
+     "new.xiongzhangad.com/*",
+     "k.cnsayo.com/*",
+     "www.hnnuange.com/*"
 ];
